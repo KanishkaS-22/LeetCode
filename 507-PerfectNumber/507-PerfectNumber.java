@@ -1,0 +1,18 @@
+// Last updated: 4/8/2026, 8:16:50 PM
+class Solution {
+    public boolean checkPerfectNumber(int num) {
+         int temp = num ;
+        int sum = 0;
+        for(int i = 1 ; i <= num/2 ; i++){
+            if(num%i == 0){
+                sum += i;
+            }
+        }
+        if(sum == temp){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
