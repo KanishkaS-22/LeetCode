@@ -1,16 +1,13 @@
-// Last updated: 5/27/2026, 2:54:00 PM
+// Last updated: 5/27/2026, 3:02:48 PM
 1class Solution {
-2    public int reverse(int x) {
-3        int rev=0;
-4        while(x!=0){
-5            int d=x%10;
-6            if(rev > Integer.MAX_VALUE / 10 || 
-7               rev < Integer.MIN_VALUE / 10){
-8                return 0;
-9            }
-10            rev=rev*10+d;
-11            x=x/10;
-12        }
-13        return rev;
-14    }
-15}
+2    public boolean searchMatrix(int[][] matrix, int target) {
+3        for(int i=0;i<matrix.length;i++){
+4            for(int j=0;j<matrix[i].length;j++){
+5                if(matrix[i][j]==target){
+6                    return true;
+7                }
+8            }
+9        }
+10        return false;
+11    }
+12}
