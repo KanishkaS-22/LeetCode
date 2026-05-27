@@ -1,7 +1,13 @@
-// Last updated: 5/27/2026, 4:23:13 PM
+// Last updated: 5/27/2026, 4:26:24 PM
 1class Solution {
-2    public int findKthLargest(int[] nums, int k) {
-3        Arrays.sort(nums);
-4        return nums[nums.length-k];
-5    }
-6}
+2    public boolean searchMatrix(int[][] matrix, int target) {
+3        for(int i=0;i<matrix.length;i++){
+4            for(int j=0;j<matrix[i].length;j++){
+5                if(matrix[i][j]==target){
+6                    return true;
+7                }
+8            }
+9        }
+10        return false;
+11    }
+12}
