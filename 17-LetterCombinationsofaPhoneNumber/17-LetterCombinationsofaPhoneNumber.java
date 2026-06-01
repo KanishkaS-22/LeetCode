@@ -1,10 +1,11 @@
-// Last updated: 6/1/2026, 4:25:14 PM
+// Last updated: 6/1/2026, 5:02:24 PM
 1class Solution {
-2    public int mySqrt(int x) {
-3        int i=0;
-4        while((long)i*i<=x){
-5            i++;
-6        }
-7        return i-1;
-8    }
-9}
+2    public void merge(int[] nums1, int m, int[] nums2, int n) {
+3       int i=m;
+4       for(int j=0;j<n;j++){
+5        nums1[i]=nums2[j];
+6        i++;
+7       }
+8       Arrays.sort(nums1);
+9    }
+10}
