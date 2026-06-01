@@ -1,15 +1,13 @@
-// Last updated: 6/1/2026, 5:10:14 PM
+// Last updated: 6/1/2026, 5:14:47 PM
 1class Solution {
 2    public int maxProfit(int[] prices) {
-3        int b=prices[0];
+3      //  int b=prices[0];
 4        int p=0;
-5        for(int j=1;j<prices.length;j++){
-6            if(prices[j]<b){
-7                b=prices[j];
-8            }else if(prices[j]-b>p){
-9                p=prices[j]-b;
-10            }
-11        }
-12        return p;
-13    }
-14}
+5        for(int i=1;i<prices.length;i++){
+6            if(prices[i]>prices[i-1]){
+7              p+=prices[i]-prices[i-1];
+8        }
+9        }
+10        return p;
+11    }
+12}
