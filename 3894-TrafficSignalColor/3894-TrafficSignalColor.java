@@ -1,14 +1,14 @@
-// Last updated: 6/2/2026, 2:55:43 PM
+// Last updated: 6/2/2026, 3:02:32 PM
 1class Solution {
-2    public String trafficSignal(int timer) {
-3        if(timer==0){
-4            return "Green";
-5        }else if(timer==30){
-6            return "Orange";
-7        }else if(timer>30&&timer<=90){
-8            return "Red";
-9        }else{
-10            return "Invalid";
-11        }
+2    public int firstMatchingIndex(String s) {
+3        int l=0,h=s.length()-1;
+4        while(l<=h){
+5            if(s.charAt(l)==s.charAt(h)){
+6                return l;
+7            }
+8                    l++;
+9                    h--;
+10                }
+11        return -1;
 12    }
 13}
