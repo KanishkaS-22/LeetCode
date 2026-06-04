@@ -1,4 +1,4 @@
-// Last updated: 6/4/2026, 4:34:08 PM
+// Last updated: 6/4/2026, 4:47:28 PM
 1class Solution {
 2    public int getSum(int a, int b) {
 3        if(b>0){
