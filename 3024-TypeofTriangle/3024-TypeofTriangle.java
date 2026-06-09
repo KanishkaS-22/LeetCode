@@ -1,4 +1,4 @@
-// Last updated: 6/3/2026, 2:32:33 PM
+// Last updated: 6/9/2026, 3:49:28 PM
 1class Solution {
 2    public String triangleType(int[] nums) {
 3        for(int i=0;i<nums.length;i++){
