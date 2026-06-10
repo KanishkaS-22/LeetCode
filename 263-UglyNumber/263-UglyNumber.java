@@ -1,4 +1,4 @@
-// Last updated: 6/4/2026, 4:22:48 PM
+// Last updated: 6/10/2026, 4:08:20 PM
 1class Solution {
 2    public boolean isUgly(int n) {
 3        if(n<=0){
