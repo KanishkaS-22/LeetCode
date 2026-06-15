@@ -1,4 +1,4 @@
-// Last updated: 6/15/2026, 9:11:42 AM
+// Last updated: 6/15/2026, 9:12:09 AM
 1class Solution {
 2    public int intVal(char ch){
 3        if(ch=='I')return 1;
