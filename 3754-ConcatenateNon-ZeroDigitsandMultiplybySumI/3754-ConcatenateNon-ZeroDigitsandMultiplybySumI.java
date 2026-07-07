@@ -1,4 +1,4 @@
-// Last updated: 7/7/2026, 11:48:03 AM
+// Last updated: 7/7/2026, 2:22:17 PM
 1class Solution {
 2    public long sumAndMultiply(int n) {
 3        int t=0;
