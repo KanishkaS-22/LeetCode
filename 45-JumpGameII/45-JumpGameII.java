@@ -1,16 +1,17 @@
-// Last updated: 9/2/2026, 11:36:21 AM
+// Last updated: 9/2/2026, 11:41:26 AM
 1class Solution {
-2    public int jump(int[] nums) {
-3        int jumps = 0;
-4        int end = 0;
-5        int farthest = 0;
-6        for (int i = 0; i < nums.length - 1; i++) {
-7            farthest = Math.max(farthest, i + nums[i]);
-8            if (i == end) {
-9                jumps++;
-10                end = farthest;
-11            }
+2    public List<List<String>> groupAnagrams(String[] strs) {
+3        HashMap<String,List<String>>map=new HashMap<>();
+4        for(String s:strs){
+5            char[]ch=s.toCharArray();
+6            Arrays.sort(ch);
+7            String key=new String(ch);
+8            if(!map.containsKey(key)){
+9                map.put(key,new ArrayList<>());
+10            }
+11            map.get(key).add(s);
 12        }
-13        return jumps;
-14    }
-15}
+13        return new ArrayList<>(map.values());
+14
+15    }
+16}
