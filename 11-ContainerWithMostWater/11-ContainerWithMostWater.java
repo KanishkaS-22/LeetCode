@@ -1,17 +1,15 @@
-// Last updated: 9/2/2026, 11:21:38 AM
+// Last updated: 9/2/2026, 11:25:54 AM
 1class Solution {
-2    public int maxArea(int[] height) {
-3        int n=height.length;
-4        int area=0,left=0,right=n-1;
-5        while(left<right){
-6            int a=(right-left)*Math.min(height[left],height[right]);
-7            area=Math.max(area,a);
-8            if(height[left]<height[right]){
-9                left++;
-10            }else{
-11                right--;
-12            }
-13        }
-14        return area;
-15    }
-16}
+2    public String longestCommonPrefix(String[] strs) {
+3        String ans=strs[0];
+4        for(int i=1;i<strs.length;i++){
+5            while(!strs[i].startsWith(ans)){
+6                ans=ans.substring(0,ans.length()-1);
+7                if(ans.length()==0){
+8                    return "";
+9                }
+10            }
+11        }
+12        return ans;
+13    }
+14}
