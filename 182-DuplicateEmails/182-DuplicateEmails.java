@@ -1,20 +1,16 @@
-// Last updated: 9/2/2026, 12:24:13 PM
+// Last updated: 9/2/2026, 12:27:00 PM
 1class Solution {
-2    public int minSubArrayLen(int target, int[] nums) {
-3        int l=0;
-4        int sum=0;
-5        int min=Integer.MAX_VALUE;
-6        for(int r=0;r<nums.length;r++){
-7            sum+=nums[r];
-8            while(sum>=target){
-9                min=Math.min(min,r-l+1);
-10                sum-=nums[l];
-11                l++;
-12            }
-13        }
-14        if(min==Integer.MAX_VALUE){
-15            return 0;
-16        }
-17        return min;
-18    }
-19}
+2    public boolean containsNearbyDuplicate(int[] nums, int k) {
+3        HashMap<Integer,Integer>map=new HashMap<>();
+4        for(int i=0;i<nums.length;i++){
+5            if(map.containsKey(nums[i])){
+6                int ind=map.get(nums[i]);
+7                if(i-ind<=k){
+8                    return true;
+9                }
+10            }
+11            map.put(nums[i],i);
+12        }
+13        return false;
+14    }
+15}
