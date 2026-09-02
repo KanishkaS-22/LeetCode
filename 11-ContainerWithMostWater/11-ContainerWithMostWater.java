@@ -1,15 +1,25 @@
-// Last updated: 9/2/2026, 11:25:54 AM
+// Last updated: 9/2/2026, 11:33:26 AM
 1class Solution {
-2    public String longestCommonPrefix(String[] strs) {
-3        String ans=strs[0];
-4        for(int i=1;i<strs.length;i++){
-5            while(!strs[i].startsWith(ans)){
-6                ans=ans.substring(0,ans.length()-1);
-7                if(ans.length()==0){
-8                    return "";
-9                }
-10            }
-11        }
-12        return ans;
-13    }
-14}
+2    public int threeSumClosest(int[] nums, int target) {
+3        Arrays.sort(nums);
+4        int ans=nums[0]+nums[1]+nums[2];
+5        for(int i=0;i<nums.length-2;i++){
+6            int left=i+1;
+7            int right=nums.length-1;
+8            while(left<right){
+9                int sum=nums[i]+nums[left]+nums[right];
+10                if(Math.abs(sum-target)<Math.abs(ans-target)){
+11                    ans=sum;
+12                }
+13                if(sum<target){
+14                    left++;
+15                }else if(sum>target){
+16                    right--;
+17                }else{
+18                    return sum;
+19                }
+20            }
+21        }
+22        return ans;
+23    }
+24}
